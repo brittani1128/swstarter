@@ -1,23 +1,23 @@
 import axios from "axios";
 
-// API routes to search for people or movies
+// API routes
 export default {
-  getPeople: function(query) {
-    return axios.get("/api/people", { params: { search: query } });
+  getPeople: function(params) {
+    return axios.get("/api/people", { params });
   },
   getPerson: function(id) {
     return axios.get("/api/person/", { params: id });
   },
-  getMovies: function(query) {
-    return axios.get("/api/movies", { params: { search: query } });
+  getMovies: function(params) {
+    return axios.get("/api/movies", { params });
   },
   getMovie: function(id) {
     return axios.get(`/api/movie/${id}`);
   },
-  getPlanets: function(query) {
-    return axios.get("/api/planets", { params: { search: query } });
+  getPlanets: function(params) {
+    return axios.get("/api/planets", { params });
   },
-  getSpecies: function(query) {
-    return axios.get("/api/species", { params: { search: query } });
+  getSpecies: function(params) {
+    return axios.get("/api/species", { params });
   }
 };

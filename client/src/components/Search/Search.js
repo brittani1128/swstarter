@@ -61,7 +61,7 @@ class Search extends React.Component {
                 type="text"
                 name="input"
                 id="input"
-                value={context.resultSearch}
+                value={context.resultSearchQuery}
                 onChange={context.handleInputChange}
                 placeholder="e.g. Chewbacca, Yoda, Boba Fett"
               />

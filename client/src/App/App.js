@@ -11,7 +11,6 @@ class App extends React.Component {
     this.setState({
       searchQuery: event.target.value
     });
-    console.log(event.target.value);
   };
 
   handleDetails = event => {
@@ -19,25 +18,26 @@ class App extends React.Component {
   };
 
   selectQuery = () => {
+    const params = { search: this.state.resultSearchQuery };
     switch (this.state.searchQuery) {
       case "people":
-        API.getPeople(this.state.resultSearch).then(res =>
-          this.setState({ results: res.data })
+        API.getPeople(params).then(res =>
+          this.setState({ searchResults: res.data })
         );
         break;
       case "movies":
-        API.getMovies(this.state.resultSearch).then(res =>
-          this.setState({ results: res.data })
+        API.getMovies(params).then(res =>
+          this.setState({ searchResults: res.data })
         );
         break;
       case "planets":
-        API.getPlanets(this.state.resultSearch).then(res =>
-          this.setState({ results: res.data })
+        API.getPlanets(params).then(res =>
+          this.setState({ searchResults: res.data })
         );
         break;
       case "species":
-        API.getSpecies(this.state.resultSearch).then(res =>
-          this.setState({ results: res.data })
+        API.getSpecies(params).then(res =>
+          this.setState({ searchResults: res.data })
         );
         break;
       default:
@@ -47,7 +47,7 @@ class App extends React.Component {
 
   handleInputChange = event => {
     this.setState({
-      resultSearch: event.target.value
+      resultSearchQuery: event.target.value
     });
   };
 
@@ -57,8 +57,8 @@ class App extends React.Component {
   };
 
   state = {
-    results: [],
-    resultSearch: "",
+    searchResults: [],
+    resultSearchQuery: "",
     resultIndex: null,
     searchQuery: "people",
     detailsSelection: "",

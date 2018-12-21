@@ -11,7 +11,7 @@ router.get("/people", (req, res) => {
 });
 
 // SEARCH PERSON ID
-router.get("/person/:id", (req, res) => {
+router.get("/person", (req, res) => {
   // console.log("hit /person api", req, res)
   axios
   .get("http https://swapi.co/api/people/", { params: req.params.id })
@@ -30,7 +30,7 @@ router.get("/movies", (req, res) => {
 });
 
 // SEARCH MOVIE ID
-router.get("/movie/:id", (req, res) => {
+router.get("/movie", (req, res) => {
   axios
   .get(`https://swapi.co/api/films/${req.params.id}`)
   .then(console.log(res))
