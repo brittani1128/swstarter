@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component should render 1`] = `
+<div
+  className="search-form"
+>
+  <h2>
+    What are you searching for?
+  </h2>
+  <form>
+    <ul
+      className="flex"
+    >
+      <div
+        className="radio-btns"
+      >
+        <li>
+          <input
+            className="radio"
+            id="people"
+            name="searchQuery"
+            type="radio"
+            value="people"
+          />
+          <label
+            htmlFor="people"
+          >
+            People
+          </label>
+        </li>
+        <li>
+          <input
+            className="radio"
+            id="movies"
+            name="searchQuery"
+            type="radio"
+            value="movies"
+          />
+          <label
+            htmlFor="movies"
+          >
+            Movies
+          </label>
+        </li>
+        <li>
+          <input
+            className="radio"
+            id="planets"
+            name="searchQuery"
+            type="radio"
+            value="planets"
+          />
+          <label
+            htmlFor="planets"
+          >
+            Planets
+          </label>
+        </li>
+        <li>
+          <input
+            className="radio"
+            id="species"
+            name="searchQuery"
+            type="radio"
+            value="species"
+          />
+          <label
+            htmlFor="species"
+          >
+            Species
+          </label>
+        </li>
+      </div>
+      <li>
+        <input
+          id="input"
+          name="input"
+          placeholder="e.g. Chewbacca, Yoda, Boba Fett"
+          type="text"
+        />
+      </li>
+      <li>
+        <input
+          id="search"
+          name="search"
+          type="button"
+          value="Search"
+        />
+      </li>
+    </ul>
+  </form>
+</div>
+`;

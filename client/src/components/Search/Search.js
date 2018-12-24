@@ -17,6 +17,7 @@ class Search extends React.Component {
               <li>
                 <input
                   type="radio"
+                  className="radio"
                   id="people"
                   name="searchQuery"
                   value="people"
@@ -27,6 +28,7 @@ class Search extends React.Component {
               <li>
                 <input
                   type="radio"
+                  className="radio"
                   id="movies"
                   name="searchQuery"
                   value="movies"
@@ -37,6 +39,7 @@ class Search extends React.Component {
               <li>
                 <input
                   type="radio"
+                  className="radio"
                   id="planets"
                   name="searchQuery"
                   value="planets"
@@ -47,6 +50,7 @@ class Search extends React.Component {
               <li>
                 <input
                   type="radio"
+                  className="radio"
                   id="species"
                   name="searchQuery"
                   value="species"
